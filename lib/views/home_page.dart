@@ -38,8 +38,7 @@ class HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const DictionaryWidget()),
+                MaterialPageRoute(builder: (context) => DictionaryWidget()),
               );
             },
             label: const Text(
