@@ -1,15 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:dictionary_app/model/dictionary_model.dart';
+import 'package:flutter/widgets.dart';
 
-class DictionaryWidget extends StatefulWidget {
-  const DictionaryWidget({Key? key}) : super(key: key);
+class DictionaryWidget extends StatelessWidget {
+  const DictionaryWidget({Key? key, this.result}) : super(key: key);
+  final DictionaryResult? result;
 
-  @override
-  _DictionaryWidgetState createState() => _DictionaryWidgetState();
-}
-
-class _DictionaryWidgetState extends State<DictionaryWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [Text(result!.name.toString()), Text(result!.url.toString())],
+    );
   }
 }
